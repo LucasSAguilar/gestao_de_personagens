@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema RPG</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="nav-sistema-rpg">
+      <ul>
+        <li class="link-nav"><a href="/personagens">Personagens</a></li>
+        <li class="link-nav">
+          <a href="/personagens/novo">Adicionar personagem</a>
+        </li>
+        <li class="link-nav"><a href="/habilidades">Habilidades</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-habilidades">
+      <h1 class="titulo-pagina">Suas habilidades</h1>
+      <div class="container-todas-habilidades">
+        <div class="box-habilidade">
+          <p class="titulo-habilidade">Título da habilidade</p>
+          <p class="descricao-habilidade">
+            Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
+            tempore sed quidem suscipit et repudiandae sunt et quae iure id
+            inventore galisum! Ut quaerat harum aut reiciendis unde est
+            voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
+            natus earum vel velit dolor.
+          </p>
+        </div>
+        <div class="box-habilidade">
+          <p class="titulo-habilidade">Título da habilidade</p>
+          <p class="descricao-habilidade">
+            Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
+            tempore sed quidem suscipit et repudiandae sunt et quae iure id
+            inventore galisum! Ut quaerat harum aut reiciendis unde est
+            voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
+            natus earum vel velit dolor.
+          </p>
+        </div>
+        <div class="box-habilidade">
+          <p class="titulo-habilidade">Título da habilidade</p>
+          <p class="descricao-habilidade">
+            Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
+            tempore sed quidem suscipit et repudiandae sunt et quae iure id
+            inventore galisum! Ut quaerat harum aut reiciendis unde est
+            voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
+            natus earum vel velit dolor.
+          </p>
+        </div>
+        <div class="box-habilidade">
+          <p class="titulo-habilidade">Título da habilidade</p>
+          <p class="descricao-habilidade">
+            Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
+            tempore sed quidem suscipit et repudiandae sunt et quae iure id
+            inventore galisum! Ut quaerat harum aut reiciendis unde est
+            voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
+            natus earum vel velit dolor.
+          </p>
+        </div>
+        <div class="box-habilidade">
+          <p class="titulo-habilidade">Título da habilidade</p>
+          <p class="descricao-habilidade">
+            Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
+            tempore sed quidem suscipit et repudiandae sunt et quae iure id
+            inventore galisum! Ut quaerat harum aut reiciendis unde est
+            voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
+            natus earum vel velit dolor.
+          </p>
+        </div>
+        <div class="box-habilidade">
+          <p class="titulo-habilidade">Título da habilidade</p>
+          <p class="descricao-habilidade">
+            Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
+            tempore sed quidem suscipit et repudiandae sunt et quae iure id
+            inventore galisum! Ut quaerat harum aut reiciendis unde est
+            voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
+            natus earum vel velit dolor.
+          </p>
+        </div>
+      </div>
+      <a class="box-adicionar-habilidade" href="/habilidades/nova">
+        <p class="txt-adicionar-novo">Criar nova habilidade</p>
+      </a>
+    </main>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .titulo-pagina {
+      text-align: left;
+      width: 100%;
+    }
+
+    .main-habilidades{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 75%;
+      margin-left: 50px;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .nav-sistema-rpg {
+      background-color: #527aff;
+      width: 250px;
+      height: 100vh;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-sistema-rpg ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-sistema-rpg ul li {
+      padding: 15px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .nav-sistema-rpg ul li a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .nav-sistema-rpg ul li:hover {
+      background-color: #405ed9;
+    }
+
+    .nav-sistema-rpg ul li a:hover {
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: left;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .container-todas-habilidades {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      height: 70%;
+      overflow-y: auto;
+    }
+
+    .box-habilidade {
+      width: 90%;
+      width: 100%;
+      height: auto;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px 0;
+      padding: 20px;
+    }
+
+    .titulo-habilidade {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .descricao-habilidade {
+      font-size: 14px;
+    }
+
+    .box-adicionar-habilidade {
+      width: 300px;
+      height: 50px;
+      background-color: #527aff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .txt-adicionar-novo {
+      color: #fff;
+      font-size: 16px;
+    }
+  </style>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema RPG</title>
+  </head>
+  <body>
+    <!-- Um titulo e um botão escrito pra apertar nele pra iniciar -->
+    <div class="box-menu-inicio">
+      <h1>Bem vindo ao sistema RPG</h1>
+      <a th:href="@{/personagens}" class="btn btn-primary">Iniciar</a>
+    </div>
+  </body>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url("/images/background_home.jpg");
+    }
+
+
+
+    .box-menu-inicio{
+        background-color: #0000008a;
+        padding: 40px;
+        
+    }
+
+    h1 {
+      font-size: 2em;
+      color: #f8f9fa;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</html>

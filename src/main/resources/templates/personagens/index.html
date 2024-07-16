@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema RPG</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="nav-sistema-rpg">
+      <ul>
+        <li class="link-nav"><a href="/personagens">Personagens</a></li>
+        <li class="link-nav">
+          <a href="/personagens/novo">Adicionar personagem</a>
+        </li>
+        <li class="link-nav"><a href="/habilidades">Habilidades</a></li>
+      </ul>
+    </nav>
+
+    <main class="box-personagens-dashboard">
+      <h1>Seus personagens</h1>
+      <div class="container-todos-personagens">
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+        <div class="box-personagem">
+          <p class="txt-nome-personagem">Nome do personagem</p>
+          <p class="txt-classe">Classe</p>
+        </div>
+
+        <div class="box-adicionar-personagem">
+          <p class="txt-adicionar-novo">Adicionar novo</p>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .nav-sistema-rpg {
+      background-color: #527aff;
+      width: 250px;
+      height: 100vh;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-sistema-rpg ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-sistema-rpg ul li {
+      padding: 15px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .nav-sistema-rpg ul li a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .nav-sistema-rpg ul li:hover {
+      background-color: #405ed9;
+    }
+
+    .nav-sistema-rpg ul li a:hover {
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    h1 {
+      text-align: left;
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    .container-todos-personagens {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .txt-nome-personagem {
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    .txt-classe {
+      font-size: 1em;
+    }
+
+    .box-personagens-dashboard {
+      display: flex;
+      width: 75%;
+      margin-left: 25px;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 5px;
+    }
+
+    .box-personagem {
+      cursor: pointer;
+
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 5px;
+      height: 170px;
+      width: 170px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .box-adicionar-personagem {
+      background-color: #527aff;
+      padding: 20px;
+      margin: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 170px;
+      width: 170px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .txt-adicionar-novo {
+      font-weight: bold;
+      color: #fff;
+    }
+  </style>
+</html>

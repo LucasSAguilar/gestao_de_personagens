@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema RPG</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css"
+    />
+  </head>
+  <body>
+    <nav class="nav-sistema-rpg">
+      <ul>
+        <li class="link-nav"><a href="/personagens">Personagens</a></li>
+        <li class="link-nav">
+          <a href="/personagens/novo">Adicionar personagem</a>
+        </li>
+        <li class="link-nav"><a href="/habilidades">Habilidades</a></li>
+      </ul>
+    </nav>
+
+    <form action="/personagens/novo" method="post">
+      <h1>Adicionar nova habilidade</h1>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Insira o nome da habilidade" required />
+
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" name="descricao" placeholder="Insira as informações sobre as habilidades" required></textarea>
+
+      <button type="submit">Adicionar habilidade</button>
+    </form>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+  <script>
+    new MultiSelectTag("habilidades"); // id
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      height: 100vh;
+      flex-direction: row;
+    }
+
+    .nav-sistema-rpg {
+      background-color: #527aff;
+      width: 300px;
+      height: 100vh;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-sistema-rpg ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-sistema-rpg ul li {
+      padding: 15px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s;
+    }
+
+    .nav-sistema-rpg ul li a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .nav-sistema-rpg ul li:hover {
+      background-color: #405ed9;
+    }
+
+    .nav-sistema-rpg ul li a:hover {
+      color: #f0f0f0;
+      cursor: pointer;
+    }
+
+    h1 {
+      margin: 20px;
+    }
+
+    form {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow-y: auto;
+      width: 75%;
+      height: 90%;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-left: 15px;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input,
+    textarea,
+    select {
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    select {
+      min-height: 100px;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px;
+      background-color: #527aff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</html>
