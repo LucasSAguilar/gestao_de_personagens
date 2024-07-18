@@ -1,7 +1,7 @@
 ## Sistema de criação de personagens
 
 ***Status***
-Em desenvolvimento
+Concluído
 
 ***Tecnologias***
 HTML
@@ -26,4 +26,3 @@ O software tem como objetivo isentar o usuário de ter que reescrever personagen
 - O sistema deve incluir as seguintes funcionalidades:
 - Permitir que o usuário salve personagens
 - Permitir que o usuário salve poderes e habilidades
-- Permitir que o usuário faça anotações e recomendações sobre os personagens.

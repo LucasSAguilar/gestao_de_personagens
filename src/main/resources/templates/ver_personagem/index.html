@@ -18,73 +18,28 @@
     </nav>
 
     <main class="box-ficha-personagem">
-      <h1>Nome do personagem</h1>
-      <p>Classe: Classe</p>
+      <h1 th:text="${personagem.nome}">Nome do personagem</h1>
+      <p th:text="${personagem.classe}">Classe: Classe</p>
 
-      <p>
-        Força: 10 <br>
-        Inteligencia: 15 <br>
-        Destreza: 12 <br>
-        Constituição: 10 <br>
-      </p>
+      <p th:text="${personagem.atributos}">Atributos</p>
 
       <h2>Descrição</h2>
-      <p> Descrição do personagem Lorem ipsum dolor sit amet. Ex officiis
-        tempore sed quidem suscipit et repudiandae sunt et quae iure id
-        inventore galisum! Ut quaerat harum aut reiciendis unde est
-        voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
-        natus earum vel velit dolor.</p>
+      <p th:text="${personagem.descricao}">Descrição do personagem</p>
 
-        <h2>História</h2>
-      <p>História do personagem Lorem ipsum dolor sit amet. Ex officiis
-        tempore sed quidem suscipit et repudiandae sunt et quae iure id
-        inventore galisum! Ut quaerat harum aut reiciendis unde est
-        voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
-        natus earum vel velit dolor.</p>
-
+      <h2>História</h2>
+      <p th:text="${personagem.historia}">História do personagem.</p>
 
       <h2>Habilidades</h2>
       <ul>
         <li>
-          <div>
-            <p>Nome da habilidade</p>
-            <p>Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
-              tempore sed quidem suscipit et repudiandae sunt et quae iure id
-              inventore galisum! Ut quaerat harum aut reiciendis unde est
-              voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
-              natus earum vel velit dolor.</p>
+          <div th:each="habilidade : ${habilidades}">
+            <p th:text="${habilidade.nome}">Nome da habilidade</p>
+            <p th:text="${habilidade.descricao}">
+              Descrição da habilidade.
+            </p>
           </div>
         </li>
-        <li>
-          <div>
-            <p>Nome da habilidade</p>
-            <p>Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
-              tempore sed quidem suscipit et repudiandae sunt et quae iure id
-              inventore galisum! Ut quaerat harum aut reiciendis unde est
-              voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
-              natus earum vel velit dolor.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p>Nome da habilidade</p>
-            <p>Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
-              tempore sed quidem suscipit et repudiandae sunt et quae iure id
-              inventore galisum! Ut quaerat harum aut reiciendis unde est
-              voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
-              natus earum vel velit dolor.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <p>Nome da habilidade</p>
-            <p>Descrição da habilidade Lorem ipsum dolor sit amet. Ex officiis
-              tempore sed quidem suscipit et repudiandae sunt et quae iure id
-              inventore galisum! Ut quaerat harum aut reiciendis unde est
-              voluptatem nobis ab placeat blanditiis et eaque voluptatibus ad
-              natus earum vel velit dolor.</p>
-          </div>
-        </li>
+      </ul>
     </main>
   </body>
 
@@ -93,6 +48,13 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 0;
+      font-size: 13px;
+      text-align: center;
     }
 
     body {
@@ -159,7 +121,7 @@
       background-color: #fff;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      height: 100%;
+      height: 90%;
     }
 
     h2 {
@@ -184,6 +146,5 @@
     p {
       margin-top: 10px;
     }
-
   </style>
 </html>

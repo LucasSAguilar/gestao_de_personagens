@@ -21,7 +21,7 @@
       </ul>
     </nav>
 
-    <form action="/personagens/novo" method="post">
+    <form th:action="@{/personagens}" th:object="${personagem}" method="post">
       <h1>Adicionar novo personagem</h1>
       <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome" required />
@@ -35,17 +35,8 @@
       <label for="historia">História</label>
       <textarea id="historia" name="historia" required></textarea>
 
-      <label for="status">Status</label>
-      <input type="text" id="status" name="status" required />
-
-      <label for="habilidades">Habilidades</label>
-      <select id="habilidades" name="habilidades" multiple>
-        <option value="1">Habilidade 1</option>
-        <option value="2">Habilidade 2</option>
-        <option value="3">Habilidade 3</option>
-        <option value="4">Habilidade 4</option>
-        <option value="5">Habilidade 5</option>
-      </select>
+      <label for="atributos">Atributos</label>
+      <input type="text" id="atributos" name="atributos" required />
 
       <button type="submit">Adicionar personagem</button>
     </form>
@@ -61,7 +52,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+    a {
+      text-decoration: none;
+      padding: 0;
+      font-size: 13px;
+      text-align: center;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;

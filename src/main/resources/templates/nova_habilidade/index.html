@@ -21,7 +21,7 @@
       </ul>
     </nav>
 
-    <form action="/personagens/novo" method="post">
+    <form th:action="@{/habilidade}" th:object="${habilidade}" method="post">
       <h1>Adicionar nova habilidade</h1>
       <label for="nome">Nome</label>
       <input type="text" id="nome" name="nome" placeholder="Insira o nome da habilidade" required />
@@ -43,7 +43,12 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+    a {
+      text-decoration: none;
+      padding: 0;
+      font-size: 13px;
+      text-align: center;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;

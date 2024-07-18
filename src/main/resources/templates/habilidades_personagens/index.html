@@ -17,21 +17,43 @@
       </ul>
     </nav>
 
-    <main class="main-habilidades">
-      <h1 class="titulo-pagina">Suas habilidades</h1>
-      <div class="container-todas-habilidades">
-        <div class="box-habilidade" th:each="habilidades : ${listaHabilidades}">
-          <p class="titulo-habilidade" th:text="${habilidades.nome}">Nome da habilidade</p>
-          <p class="descricao-habilidade" th:text="${habilidades.descricao}">
-            Descrição da habilidade 
-          </p>
+    <form
+      class="form-habilidades"
+      th:action="@{/personagens/{id}/habilidades(id=${personagemEditado.id})}"
+      method="post"
+    >
+      <main class="main-habilidades">
+        <h1 class="titulo-pagina">
+          Selecione as habilidades de
+          <span th:text="${personagemEditado.nome}">Nome do Personagem</span>
+        </h1>
+
+        <!-- fazer cheboxes com as habilidades usando th:each -->
+        <div th:each="habilidade : ${listaHabilidades}" class="box-habilidade">
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              th:id="${'habilidade-' + habilidade.id}"
+              name="habilidades"
+              th:value="${habilidade.id}"
+            />
+          </div>
+          <div class="text-container">
+            <p class="titulo-habilidade" th:text="${habilidade.nome}">
+              Nome da habilidade
+            </p>
+            <p class="descricao-habilidade" th:text="${habilidade.descricao}">
+              Descrição da habilidade
+            </p>
+          </div>
         </div>
-       
-      </div>
-      <a class="box-adicionar-habilidade" href="/habilidades/nova">
-        <p class="txt-adicionar-novo">Criar nova habilidade</p>
-      </a>
-    </main>
+      </main>
+      <input
+        type="submit"
+        value="Alterar habilidades"
+        class="btt-adicionar-habilidade"
+      />
+    </form>
   </body>
 
   <style>
@@ -42,6 +64,12 @@
       text-decoration: none;
     }
 
+    a {
+      text-decoration: none;
+      padding: 0;
+      font-size: 13px;
+      text-align: center;
+    }
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f0f0;
@@ -49,18 +77,26 @@
       flex-direction: row;
     }
 
+    .form-habilidades {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 75%;
+    }
+
     .titulo-pagina {
       text-align: left;
       width: 100%;
     }
 
-    .main-habilidades{
+    .main-habilidades {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 75%;
+      width: 100%;
+      overflow-y: auto;
       margin-left: 50px;
-      height: 100vh;
+      height: 75%;
       padding: 20px;
     }
 
@@ -107,13 +143,6 @@
       margin-top: 20px;
     }
 
-    a {
-      text-decoration: none;
-      padding: 0;
-      font-size: 13px;
-      text-align: center;
-    }
-
     .container-todas-habilidades {
       display: flex;
       flex-direction: column;
@@ -128,10 +157,33 @@
       width: 100%;
       height: auto;
       background-color: #fff;
+      display: flex;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin: 10px 0;
       padding: 20px;
+    }
+
+    .checkbox-container {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .checkbox-container input {
+      width: 20px;
+      height: 20px;
+    }
+
+    .text-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left: 10px;
     }
 
     .titulo-habilidade {
@@ -144,22 +196,16 @@
       font-size: 14px;
     }
 
-    .box-adicionar-habilidade {
-      width: 300px;
+    .btt-adicionar-habilidade {
+      width: 200px;
       height: 50px;
       background-color: #527aff;
-      border-radius: 5px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 10px;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .txt-adicionar-novo {
       color: #fff;
-      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
     }
   </style>
 </html>
